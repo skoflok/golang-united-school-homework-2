@@ -15,21 +15,14 @@ import (
 type SideCounter int
 
 const Pi float64 = math.Pi
-const SidesTriangle int = 3
-const SidesSquare int = 4
-const SidesCircle int = 0
-
-var availableSides = []int{SidesTriangle, SidesSquare, SidesCircle}
 
 func CalcSquare(sideLen float64, sidesNum SideCounter) float64 {
 	var square float64 = 0
 	switch sidesNum {
 	case 0:
 		square = calcCircle(sideLen)
-		break
 	case 3:
 		square = caclTriangle(sideLen)
-		break
 	case 4:
 		square = calcSquare(sideLen)
 	default:
